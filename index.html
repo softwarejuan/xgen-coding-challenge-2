@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>XGen Coding Assessment</title>
+	</head>
+	<body>
+		<div id="app">
+			<dialog>
+				<img style="min-width: 150px" width="50%" src="/xgen_logo.svg" />
+				<div class="close_dialog"><img width="15px" src="/close-white.svg" /></div>
+				Great Job!!!<br />You passed the Assessment
+			</dialog>
+			<div class="refresh_button"><img src="/refresh.svg" /></div>
+			<div id="MainSection" class="page">
+				<img src="/xgen_logo.svg" />
+				<form>
+					<p class="joke_question"></p>
+					<input type="text" class="xgen_answer" placeholder="Class: xgen_answer" />
+					<button class="submit">Submit</button>
+				</form>
+				<h1>XGen Coding Assessment</h1>
+				<ol class="CodingList">
+					<li>
+						Wait for Element
+						<ol class="NestedList">
+							<li>
+								Click the 'Get Joke' button below and after a random amount of time an element with the class 
+								'xgen_button' will pop up in its place.
+							</li>
+							<li>
+								Once the element is available, click on it through JavaScript. If you don't click on it in time, 
+								the button will be disabled.
+							</li>
+							<li>Bonus Points if setTimeout and/or setInterval are not used.</li>
+						</ol>
+					</li>
+					<li>
+						Wait for a Global Variable to become available
+						<ol class="NestedList">
+							<li>
+								After the element is clicked from the first step, a joke will be generated and the answer will 
+								become available in the window.xgenVariable global variable. This will also happen after a random 
+								amount of time.
+							</li>
+							<li>Listen for when this variable (answer to the joke) is set.</li>
+							<li>Bonus Points if setTimeout and/or setInterval are not used.</li>
+						</ol>
+					</li>
+					<li>
+						Save answer for the next page refresh
+						<ol class="NestedList">
+							<li>
+								Once you have listened to the variable being set, save that value so that it can be used on the
+								next page refresh
+							</li>
+							<li>Click on the refresh button on the top right side of your screen through JavaScript to refresh the page</li>
+							<li>
+								After the page is refreshed, the value (answer to joke) should be automatically input into the
+								text box.
+							</li>
+							<li>Use JavaScript to click the Submit button.</li>
+						</ol>
+					</li>
+				</ol>
+				<button class="get_joke">Get Joke</button>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+		<script type="module" src="/answer.js"></script>
+	</body>
+</html>
